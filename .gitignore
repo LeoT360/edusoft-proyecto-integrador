@@ -1,0 +1,14 @@
+# Dependencias y compilados
+node_modules/
+build/
+target/
+
+# Variables de entorno locales (usa .env.example como plantilla)
+.env
+.env.local
+
+# IDE y sistema operativo
+.idea/
+.vscode/
+*.iml
+.DS_Store

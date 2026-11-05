@@ -1,0 +1,209 @@
+/* Sidebar desktop */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 248px;
+  display: flex;
+  flex-direction: column;
+  background: var(--edusoft-superficie, #fff);
+  border-right: 1px solid var(--edusoft-borde, #e2e8f0);
+  z-index: 40;
+  padding: 1rem 0.75rem;
+}
+
+.sidebar-brand {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0.5rem 0.65rem 1rem;
+  text-align: left;
+}
+
+.sidebar-brand img {
+  height: 50px;
+  width: auto;
+  max-width: 100%;
+}
+
+.sidebar-user {
+  margin: 0 0.5rem 1rem;
+  padding: 0.75rem 0.85rem;
+  border-radius: 12px;
+  background: var(--edusoft-fondo, #f5f7fa);
+  border: 1px solid var(--edusoft-borde, #e2e8f0);
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.sidebar-user strong {
+  font-size: 0.9rem;
+  color: var(--edusoft-texto, #172033);
+}
+
+.sidebar-user span {
+  font-size: 0.75rem;
+  color: var(--edusoft-texto-secundario, #64748b);
+}
+
+.nav-list {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0 0.25rem;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: var(--edusoft-texto-secundario, #64748b);
+  font: inherit;
+  font-size: 0.88rem;
+  font-weight: 500;
+  padding: 0.6rem 0.75rem;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.12s, color 0.12s;
+}
+
+.nav-item:hover {
+  background: var(--edusoft-fondo, #f5f7fa);
+  color: var(--edusoft-texto, #172033);
+}
+
+.nav-item.is-active {
+  background: var(--edusoft-info-fondo, #dbeafe);
+  color: var(--edusoft-primario, #1d4ed8);
+  font-weight: 600;
+}
+
+.nav-item.is-danger {
+  color: var(--edusoft-error, #dc2626);
+}
+
+.nav-item.is-danger:hover {
+  background: var(--edusoft-error-fondo, #fee2e2);
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--edusoft-borde, #e2e8f0);
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+/* offset: .protected-content en App.css */
+
+/* Mobile topbar */
+.topbar {
+  display: none;
+  position: sticky;
+  top: 0;
+  z-index: 45;
+  height: 56px;
+  padding: 0 0.85rem;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--edusoft-superficie, #fff);
+  border-bottom: 1px solid var(--edusoft-borde, #e2e8f0);
+}
+
+.topbar-logo {
+  height: 24px;
+  cursor: pointer;
+}
+
+.topbar-actions {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.topbar-btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--edusoft-texto, #172033);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.topbar-btn:hover {
+  background: var(--edusoft-fondo, #f5f7fa);
+}
+
+/* Drawer mobile */
+.drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.45);
+  z-index: 50;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.drawer {
+  width: min(300px, 88vw);
+  height: 100%;
+  background: var(--edusoft-superficie, #fff);
+  border-left: 1px solid var(--edusoft-borde, #e2e8f0);
+  display: flex;
+  flex-direction: column;
+  padding: 0.75rem;
+  animation: drawer-in 0.2s ease;
+}
+
+@keyframes drawer-in {
+  from { transform: translateX(12px); opacity: 0.6; }
+  to { transform: none; opacity: 1; }
+}
+
+.drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0.35rem 1rem;
+  border-bottom: 1px solid var(--edusoft-borde, #e2e8f0);
+  margin-bottom: 0.5rem;
+}
+
+.drawer-header strong {
+  display: block;
+  font-size: 0.95rem;
+}
+
+.drawer-header span {
+  font-size: 0.75rem;
+  color: var(--edusoft-texto-secundario, #64748b);
+}
+
+.drawer-footer {
+  margin-top: auto;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--edusoft-borde, #e2e8f0);
+}
+
+body.dark .sidebar,
+body.dark .topbar,
+body.dark .drawer {
+  background: var(--edusoft-superficie);
+}
+
+@media (max-width: 900px) {
+  .sidebar { display: none; }
+  .topbar { display: flex; }
+  
+}

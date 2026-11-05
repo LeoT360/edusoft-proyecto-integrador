@@ -1,0 +1,68 @@
+/* EduSoft — estilos globales de app */
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background: var(--edusoft-fondo, #f5f7fa);
+  color: var(--edusoft-texto, #172033);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.App { min-height: 100vh; }
+
+button, input, select, textarea { font-family: inherit; }
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: var(--edusoft-borde-input, #cbd5e1);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+/* Contenido con sidebar */
+.protected-content {
+  min-height: 100vh;
+  margin-left: 248px;
+}
+
+@media (max-width: 900px) {
+  .protected-content {
+    margin-left: 0;
+    padding-top: 0;
+  }
+}
+
+/* Legacy helpers */
+.page-container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem;
+}
+
+.mensaje-global {
+  padding: 0.75rem 1rem;
+  margin: 1rem 0;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid;
+}
+
+.mensaje-global.exito {
+  background: var(--edusoft-exito-fondo, #dcfce7);
+  color: #166534;
+  border-color: #86efac;
+}
+.mensaje-global.error {
+  background: var(--edusoft-error-fondo, #fee2e2);
+  color: #991b1b;
+  border-color: #fca5a5;
+}

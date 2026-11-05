@@ -1,0 +1,85 @@
+/* EduSoft — tokens de color y base de tema */
+
+:root {
+  /* Marca */
+  --edusoft-primario: #1d4ed8;
+  --edusoft-primario-hover: #1e40af;
+  --edusoft-acento: #e5a11a;
+  --edusoft-profundo: #040759;
+
+  /* Neutros */
+  --edusoft-texto: #172033;
+  --edusoft-texto-secundario: #64748b;
+  --edusoft-fondo: #f5f7fa;
+  --edusoft-superficie: #ffffff;
+  --edusoft-borde: #e2e8f0;
+  --edusoft-borde-input: #cbd5e1;
+
+  /* Alias legacy (módulos antiguos) */
+  --edusoft-azul-medio: var(--edusoft-primario);
+  --edusoft-azul-cielo: #0080ff;
+  --edusoft-azul-profundo: var(--edusoft-profundo);
+  --edusoft-aqua: #3b82f6;
+  --edusoft-blanco: #ffffff;
+  --edusoft-gris-oscuro: #172033;
+  --edusoft-gris-claro: #f5f7fa;
+  --edusoft-amarillo: var(--edusoft-acento);
+  --edusoft-amarillo-oscuro: #b7791f;
+  --edusoft-texto-principal: var(--edusoft-texto);
+  --edusoft-texto-sobre-azul: #ffffff;
+  --edusoft-fondo-app: var(--edusoft-fondo);
+  --edusoft-fondo-card: var(--edusoft-superficie);
+  --edusoft-fondo-card-hover: #f8fafc;
+  --edusoft-borde-card: var(--edusoft-borde);
+  --edusoft-sombra-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
+  --edusoft-sombra-md: 0 4px 16px rgba(15, 23, 42, 0.08);
+
+  /* Estado */
+  --edusoft-exito: #16a34a;
+  --edusoft-exito-fondo: #dcfce7;
+  --edusoft-error: #dc2626;
+  --edusoft-error-fondo: #fee2e2;
+  --edusoft-info: #2563eb;
+  --edusoft-info-fondo: #dbeafe;
+  --edusoft-advertencia: var(--edusoft-acento);
+  --edusoft-advertencia-fondo: #fef3c7;
+
+  /* Shared UI bridge */
+  --es-primary: var(--edusoft-primario);
+  --es-primary-hover: var(--edusoft-primario-hover);
+  --es-text: var(--edusoft-texto);
+  --es-muted: var(--edusoft-texto-secundario);
+  --es-border: var(--edusoft-borde);
+  --es-surface: var(--edusoft-superficie);
+  --es-soft: var(--edusoft-fondo);
+  --es-danger: var(--edusoft-error);
+  --es-success: var(--edusoft-exito);
+}
+
+body.dark {
+  --edusoft-primario: #60a5fa;
+  --edusoft-primario-hover: #93c5fd;
+  --edusoft-acento: #fbbf24;
+  --edusoft-profundo: #93c5fd;
+  --edusoft-texto: #e2e8f0;
+  --edusoft-texto-secundario: #94a3b8;
+  --edusoft-fondo: #0f172a;
+  --edusoft-superficie: #1e293b;
+  --edusoft-borde: #334155;
+  --edusoft-borde-input: #475569;
+  --edusoft-fondo-card-hover: #263449;
+  --edusoft-sombra-sm: none;
+  --edusoft-sombra-md: 0 8px 24px rgba(0, 0, 0, 0.35);
+  --edusoft-exito-fondo: #14532d;
+  --edusoft-error-fondo: #450a0a;
+  --edusoft-info-fondo: #1e3a8a;
+  --edusoft-advertencia-fondo: #78350f;
+}
+
+html, body, #root { min-height: 100%; }
+body {
+  margin: 0;
+  background: var(--edusoft-fondo);
+  color: var(--edusoft-texto);
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}

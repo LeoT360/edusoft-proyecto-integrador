@@ -1,0 +1,268 @@
+/* ================================================================
+   EDUSOFT — LOGIN
+   ================================================================ */
+
+.contenedor-login {
+  min-height: 100dvh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(390px, 480px);
+  box-sizing: border-box;
+  background: #EEF4FB;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-volver-inicio {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+  padding: 9px 14px;
+  border: 1px solid rgba(203, 213, 225, .9);
+  border-radius: 6px;
+  background: rgba(255,255,255,.92);
+  color: #172554;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color .18s ease, border-color .18s ease, color .18s ease;
+}
+
+.btn-volver-inicio:hover {
+  background: #FFFFFF;
+  border-color: #94A3B8;
+  color: #1D4ED8;
+}
+
+.auth-visual {
+  min-height: 100dvh;
+  position: relative;
+  overflow: hidden;
+  background: #172554;
+}
+
+.auth-visual-image,
+.auth-visual-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.auth-visual-image img {
+  display: block;
+  object-fit: cover;
+}
+
+.auth-visual-login .auth-visual-image img {
+  object-position: center;
+}
+
+.auth-visual-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 60px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  background: rgba(23, 37, 84, .62);
+}
+
+.auth-visual-logo {
+  width: 300px;
+  height: auto;
+  margin-bottom: 22px;
+  filter: brightness(0) invert(1);
+}
+
+.login-formulario {
+  width: 100%;
+  max-width: 380px;
+  align-self: center;
+  justify-self: center;
+  padding: 38px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(15,23,42,.06);
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+.login-formulario h2 {
+  margin: 0 0 8px;
+  color: #172554;
+  font-size: 28px;
+  letter-spacing: -.025em;
+}
+
+.login-formulario h2::after {
+  content: 'Accede a tu cuenta para continuar.';
+  display: block;
+  margin-top: 8px;
+  color: #64748B;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.login-formulario input {
+  min-height: 44px;
+  padding: 0 13px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  border: 1px solid #CBD5E1;
+  background: #FFFFFF;
+  color: #172033;
+  font-size: 14px;
+}
+
+.login-formulario input:focus {
+  outline: none;
+  border-color: #3B82F6;
+  box-shadow: 0 0 0 3px rgba(59,130,246,.12);
+}
+
+.login-formulario > button {
+  min-height: 44px;
+  margin-top: 4px;
+  padding: 0 14px;
+  border: none;
+  border-radius: 6px;
+  background: #1D4ED8;
+  color: #FFFFFF;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color .18s ease;
+}
+
+.login-formulario > button:hover {
+  background: #1E40AF;
+}
+
+.login-formulario > button:disabled {
+  background: #94A3B8;
+  cursor: not-allowed;
+}
+
+.login-formulario p {
+  margin: 4px 0 0;
+  color: #64748B;
+  font-size: 13px;
+  text-align: center;
+}
+
+.login-formulario p a {
+  color: #1D4ED8;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.login-formulario p a:hover {
+  text-decoration: underline;
+}
+
+/* ================================================================
+   DARK MODE
+   ================================================================ */
+
+body.dark .contenedor-login {
+  background: #0F172A;
+}
+
+body.dark .btn-volver-inicio {
+  background: #1E293B;
+  border-color: #475569;
+  color: #E2E8F0;
+}
+
+body.dark .btn-volver-inicio:hover {
+  background: #263449;
+  border-color: #64748B;
+  color: #93C5FD;
+}
+
+body.dark .auth-visual-overlay {
+  background: rgba(15,23,42,.72);
+}
+
+body.dark .auth-visual-logo {
+  filter: none;
+}
+
+body.dark .login-formulario {
+  background: #1E293B;
+  border-color: #334155;
+  box-shadow: none;
+}
+
+body.dark .login-formulario h2 {
+  color: #E2E8F0;
+}
+
+body.dark .login-formulario h2::after {
+  color: #94A3B8;
+}
+
+body.dark .login-formulario input {
+  background: #0F172A;
+  border-color: #475569;
+  color: #E2E8F0;
+}
+
+body.dark .login-formulario p {
+  color: #94A3B8;
+}
+
+body.dark .login-formulario p a {
+  color: #93C5FD;
+}
+
+@media (max-width: 900px) {
+  .contenedor-login {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .auth-visual {
+    min-height: 310px;
+    height: 310px;
+    flex-shrink: 0;
+  }
+
+  .auth-visual-overlay {
+    padding: 34px 24px 28px;
+  }
+
+  .auth-visual-logo {
+    width: 145px;
+    margin-bottom: 15px;
+  }
+
+  .auth-visual-overlay h1 {
+    font-size: 30px;
+  }
+
+  .auth-visual-overlay p {
+    margin-top: 10px;
+    font-size: 12px;
+  }
+
+  .login-formulario {
+    width: calc(100% - 28px);
+    max-width: 420px;
+    margin: 24px auto 30px;
+    padding: 28px 22px;
+  }
+
+  .btn-volver-inicio {
+    top: 12px;
+    left: 12px;
+  }
+}

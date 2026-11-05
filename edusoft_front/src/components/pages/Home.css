@@ -1,0 +1,198 @@
+.home-page {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+}
+
+.home-hero {
+  margin-bottom: 1.75rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--edusoft-borde, #e2e8f0);
+}
+
+.home-eyebrow {
+  margin: 0 0 0.35rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--edusoft-primario, #1d4ed8);
+}
+
+.home-hero h1 {
+  margin: 0;
+  font-size: clamp(1.5rem, 2.5vw, 1.85rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--edusoft-texto, #172033);
+}
+
+.home-lead {
+  margin: 0.45rem 0 0;
+  max-width: 36rem;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--edusoft-texto-secundario, #64748b);
+}
+
+/* Grid de módulos: 2 filas de 4 tarjetas */
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.15rem;
+}
+
+.home-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  text-align: left;
+  padding: 1.45rem 1.25rem 1.35rem;
+  min-height: 160px;
+  border: 1px solid var(--edusoft-borde, #e2e8f0);
+  border-radius: 16px;
+  background: var(--edusoft-superficie, #fff);
+  box-shadow: var(--edusoft-sombra-sm, 0 1px 2px rgba(15, 23, 42, 0.05));
+  cursor: pointer;
+  transition: border-color 0.18s, box-shadow 0.18s, transform 0.18s;
+  color: inherit;
+  font: inherit;
+  position: relative;
+}
+
+.home-card:hover:not(:disabled) {
+  border-color: rgba(29, 78, 216, 0.4);
+  box-shadow: var(--edusoft-sombra-md, 0 8px 24px rgba(15, 23, 42, 0.1));
+  transform: translateY(-3px);
+}
+
+.home-card:disabled,
+.home-card.is-soon {
+  opacity: 0.72;
+  cursor: default;
+}
+
+.home-card-icon {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: var(--edusoft-info-fondo, #dbeafe);
+  color: var(--edusoft-primario, #1d4ed8);
+}
+
+.home-card-body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  width: 100%;
+}
+
+.home-card-title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--edusoft-texto, #172033);
+  line-height: 1.25;
+}
+
+.home-card-desc {
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: var(--edusoft-texto-secundario, #64748b);
+}
+
+.home-card-arrow {
+  position: absolute;
+  top: 1.35rem;
+  right: 1.15rem;
+  color: var(--edusoft-texto-secundario, #64748b);
+  opacity: 0.5;
+  transition: color 0.15s, opacity 0.15s, transform 0.15s;
+}
+
+.home-card:hover:not(:disabled) .home-card-arrow {
+  color: var(--edusoft-primario, #1d4ed8);
+  opacity: 1;
+  transform: translateX(3px);
+}
+
+.home-badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  background: var(--edusoft-info-fondo, #dbeafe);
+  color: var(--edusoft-primario, #1d4ed8);
+}
+
+.home-badge.soon {
+  background: var(--edusoft-advertencia-fondo, #fef3c7);
+  color: #92400e;
+}
+
+/* Stats debajo de las tarjetas */
+.home-stats {
+  margin-top: 2.5rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--edusoft-borde, #e2e8f0);
+}
+
+.home-stats .es-kpis {
+  margin-bottom: 0;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+body.dark .home-card-icon {
+  background: rgba(96, 165, 250, 0.15);
+  color: #93c5fd;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .home-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .home-page {
+    padding: 1.25rem 0.9rem 2rem;
+  }
+
+  .home-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-card {
+    min-height: 0;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 1.15rem 1rem;
+  }
+
+  .home-card-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .home-card-arrow {
+    position: static;
+    margin-left: auto;
+    margin-top: 0.2rem;
+  }
+
+  .home-stats .es-kpis {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,58 @@
+/* ====================================
+   MÓDULO CURSOS - TEMA EduSoft
+   ==================================== */
+
+/* ===== CONTENEDOR PRINCIPAL ===== */
+
+/* ===== ENCABEZADO ===== */
+
+/* ===== FILTROS ===== */
+
+/* ===== ESTADOS ===== */
+
+/* ===== GRID DE TARJETAS ===== */
+
+/* ===== TARJETA ===== */
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Franja de tipo */
+
+/* Badge modalidad */
+
+/* Metadata chips */
+
+/* Calificación */
+
+/* Footer de la tarjeta */
+
+/* ===== MODAL ===== */
+
+@keyframes fadeOv {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes modalUp {
+  from { opacity: 0; transform: translateY(-28px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Scrollbar del modal */
+
+/* ===== FORMULARIO ===== */
+
+/* Grid 2 columnas para campos pequeños */
+
+/* Checkbox presencialidad */
+
+/* Reutiliza .message-alert, .message-success, .message-error de Profesores.css */
+/* Reutiliza .form-group, .btn-submit, .btn-cancel, .form-actions de Profesores.css */
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .form-actions { flex-direction: column; }
+}

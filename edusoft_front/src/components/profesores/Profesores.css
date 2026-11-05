@@ -1,0 +1,71 @@
+/* ====================================
+   MÓDULO PROFESORES - TEMA EduSoft
+   Adaptado con variables del sistema institucional
+   ==================================== */
+
+/* ===== CONTENEDOR PRINCIPAL ===== */
+
+/* ===== TÍTULO ===== */
+
+/* ===== HEADER CON BOTÓN NUEVO ===== */
+
+/* ===== BOTÓN NUEVO PROFESOR ===== */
+
+/* ===== BUSCADOR ===== */
+
+/* ===== ESTADOS VACÍOS / ERROR ===== */
+
+/* ===== GRID DE TARJETAS ===== */
+
+/* ===== TARJETA ===== */
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Barra de color superior */
+
+/* ===== FOTO ===== */
+
+/* ===== INFO EN TARJETA ===== */
+
+/* ===== BADGES ===== */
+
+/* ===== BOTONES DE ACCIÓN EN TARJETA ===== */
+
+/* ===== MODAL DE DETALLE ===== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(48, 43, 180, 0.6);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeOverlay 0.25s ease;
+  padding: 20px;
+}
+
+@keyframes fadeOverlay {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Scrollbar del modal */
+
+/* ===== FORMULARIO (FormularioProfesor) ===== */
+
+/* ===== BOTONES DEL FORMULARIO ===== */
+.form-actions {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .form-actions { flex-direction: column; }
+}

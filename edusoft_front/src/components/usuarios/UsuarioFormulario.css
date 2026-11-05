@@ -1,0 +1,280 @@
+/* ================================================================
+   EDUSOFT — REGISTRO
+   ================================================================ */
+
+.contenedor-formulario {
+  min-height: 100dvh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(390px, 480px);
+  box-sizing: border-box;
+  background: #EEF4FB;
+  position: relative;
+  overflow: hidden;
+}
+
+.contenedor-formulario .btn-volver-inicio {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+  padding: 9px 14px;
+  border: 1px solid #CBD5E1;
+  border-radius: 6px;
+  background: rgba(255,255,255,.94);
+  color: #172554;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color .18s ease, border-color .18s ease, color .18s ease;
+}
+
+.contenedor-formulario .btn-volver-inicio:hover {
+  background: #FFFFFF;
+  border-color: #94A3B8;
+  color: #1D4ED8;
+}
+
+.auth-visual {
+  min-height: 100dvh;
+  position: relative;
+  overflow: hidden;
+  background: #172554;
+}
+
+.auth-visual-image,
+.auth-visual-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.auth-visual-image img {
+  display: block;
+  object-fit: cover;
+}
+
+.auth-visual-registro .auth-visual-image img {
+  object-position: center;
+}
+
+.auth-visual-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 60px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  background: rgba(23,37,84,.62);
+}
+
+.auth-visual-logo {
+  width: 300px;
+  height: auto;
+  margin-bottom: 22px;
+  filter: brightness(0) invert(1);
+}
+
+.usuario-formulario {
+  width: 100%;
+  max-width: 390px;
+  align-self: center;
+  justify-self: center;
+  padding: 34px 36px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(15,23,42,.06);
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+.usuario-formulario h2 {
+  margin: 0 0 8px;
+  color: #172554;
+  font-size: 27px;
+  letter-spacing: -.025em;
+}
+
+.usuario-formulario h2::after {
+  content: 'Completa los datos para crear tu cuenta.';
+  display: block;
+  margin-top: 8px;
+  color: #64748B;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.usuario-formulario input,
+.usuario-formulario select {
+  min-height: 42px;
+  padding: 0 12px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  border: 1px solid #CBD5E1;
+  background: #FFFFFF;
+  color: #172033;
+  font-size: 14px;
+}
+
+.usuario-formulario input:focus,
+.usuario-formulario select:focus {
+  outline: none;
+  border-color: #3B82F6;
+  box-shadow: 0 0 0 3px rgba(59,130,246,.12);
+}
+
+.usuario-formulario select {
+  cursor: pointer;
+}
+
+.usuario-formulario > button {
+  min-height: 43px;
+  margin-top: 4px;
+  padding: 0 14px;
+  border: none;
+  border-radius: 6px;
+  background: #1D4ED8;
+  color: #FFFFFF;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color .18s ease;
+}
+
+.usuario-formulario > button:hover {
+  background: #1E40AF;
+}
+
+.usuario-formulario > button:disabled {
+  background: #94A3B8;
+  cursor: not-allowed;
+}
+
+.contenedor-formulario p {
+  margin: 4px 0 0;
+  color: #64748B;
+  font-size: 13px;
+  text-align: center;
+}
+
+.contenedor-formulario p a {
+  color: #1D4ED8;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.contenedor-formulario p a:hover {
+  text-decoration: underline;
+}
+
+.error-mensaje {
+  background: #FEE2E2;
+  color: #991B1B !important;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  text-align: center;
+}
+
+body.dark .contenedor-formulario {
+  background: #0F172A;
+}
+
+body.dark .contenedor-formulario .btn-volver-inicio {
+  background: #1E293B;
+  border-color: #475569;
+  color: #E2E8F0;
+}
+
+body.dark .contenedor-formulario .btn-volver-inicio:hover {
+  background: #263449;
+  border-color: #64748B;
+  color: #93C5FD;
+}
+
+body.dark .auth-visual-overlay {
+  background: rgba(15,23,42,.72);
+}
+
+body.dark .auth-visual-logo {
+  filter: none;
+}
+
+body.dark .usuario-formulario {
+  background: #1E293B;
+  border-color: #334155;
+  box-shadow: none;
+}
+
+body.dark .usuario-formulario h2 {
+  color: #E2E8F0;
+}
+
+body.dark .usuario-formulario h2::after {
+  color: #94A3B8;
+}
+
+body.dark .usuario-formulario input,
+body.dark .usuario-formulario select {
+  background: #0F172A;
+  border-color: #475569;
+  color: #E2E8F0;
+}
+
+body.dark .contenedor-formulario p {
+  color: #94A3B8;
+}
+
+body.dark .contenedor-formulario p a {
+  color: #93C5FD;
+}
+
+@media (max-width: 900px) {
+  .contenedor-formulario {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .auth-visual {
+    min-height: 310px;
+    height: 310px;
+    flex-shrink: 0;
+  }
+
+  .auth-visual-overlay {
+    padding: 34px 24px 28px;
+  }
+
+  .auth-visual-logo {
+    width: 145px;
+    margin-bottom: 15px;
+  }
+
+  .auth-visual-overlay h1 {
+    font-size: 30px;
+  }
+
+  .auth-visual-overlay p {
+    margin-top: 10px;
+    font-size: 12px;
+  }
+
+  .usuario-formulario {
+    width: calc(100% - 28px);
+    max-width: 420px;
+    margin: 24px auto 30px;
+    padding: 28px 22px;
+  }
+
+  .contenedor-formulario .btn-volver-inicio {
+    top: 12px;
+    left: 12px;
+  }
+}
